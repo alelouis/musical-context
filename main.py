@@ -4,11 +4,8 @@ minor = scale_transform(Scale.to_minor)
 major = scale_transform(Scale.to_major)
 up = scale_transform(Scale.up)
 
-s = Scale(0, 'major')
+s = Scale('C', 'major')
 s.one()
 
-with minor(s):
+with up(s, 1):
     s.one()
-    with up(s, 1):
-        s.one()
-s.one()
